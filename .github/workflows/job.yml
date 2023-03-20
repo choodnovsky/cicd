@@ -11,7 +11,8 @@ jobs:
     steps:
       - name: build
         run: mkdir build |
-          echo "Privet" > ./build/info.txt
+          touch ./build/info.txt && 
+          echo "privet" > ./build/info.txt
       - name: test
         run: echo "Testung" |
           if [ -f ./build/info.txt ]; then echo "File info.txt exists"; else echo "File info.txt doesn't exits"; fi
