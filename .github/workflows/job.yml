@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: build
-        run: mkdir ./build |
+        run: mkdir build |
           echo "Privet!" > ./build/info.txt
       - name: test
         run: echo "Testung" |
