@@ -20,10 +20,10 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: echo "yobana rot!!!" > test.txt
   test:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Run a next-line script
-        run: echo Hello, world!!!!!!!!
+        run: cat test.txt
