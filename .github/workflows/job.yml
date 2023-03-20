@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: build
-        run: mkdir build |
+      - run: mkdir build |
           echo "Privet!" > ./build/info.txt
       - name: test
-        run: echo "Testung" |
+      - run: echo "Testung" |
           if [ -f ./build/info.txt ]; then echo "File info.txt exists"; else echo "File info.txt doesn't exits"; fi
 
