@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  pipeline:
     runs-on: ubuntu-latest
     env:
       DIR_TITLE: build
