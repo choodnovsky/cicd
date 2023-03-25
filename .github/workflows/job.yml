@@ -6,13 +6,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      DIR_TITLE: build
     steps:
       - name: build
         env:
           MY_VAR: Hi! My name is,
           FIRST_NAME: Slim
           LAST_NAME: Shady
-        run:  mkdir -p build | touch ./build/info.txt && echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME > ./build/info.txt
+        run:  mkdir -p $DIR_TITLE | touch ./$DIR_TITLE/info.txt && echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME > ./$DIR_TITLE/info.txt
       - name: test
-        run: if [ -f ./build/info.txt ]; then echo "File info.txt exists" && cat ./build/info.txt; else echo "File info.txt doesn't exits"; fi
+        run: if [ -f ./$DIR_TITLE/info.txt ]; then echo "File info.txt exists" && cat ./$DIR_TITLE/info.txt; else echo "File info.txt doesn't exits"; fi
 
